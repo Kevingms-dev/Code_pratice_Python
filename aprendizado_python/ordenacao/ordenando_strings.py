@@ -40,16 +40,10 @@ def merge_sort(lista:list) -> None:
 
 def main():	
     casos = int(input())
-    
-    try:
-	    for _ in range(1, casos +1):
+    for _ in range(1, casos +1):
+        lista = input().split()
+        merge_sort(lista)
+        print(" ".join(lista))
 
-	        lista = input().split()
-            merge_sort(lista)
-            print(" ".join(lista))
-	        
-    except ValueError:
-	    print("Digite apenas strings")
-			
 if __name__ == '__main__':
     main()
